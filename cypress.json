@@ -1,0 +1,7 @@
+{
+    "screenshotsFolder": "cypress/videos",
+    "env": {
+        "var1": "first",
+        "var2": "second"
+    }
+}
