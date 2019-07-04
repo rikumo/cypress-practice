@@ -5,15 +5,16 @@ describe("Test LambdaTest Website XHR", () => {
     })
     
     it("Perform login and verify response using XHR", () => {
-        // Start the proxy servcer that will intercept XMLHttpRequests that cy.route() sends
-        // cy.server()
+        // Start the proxy servcer that will intercept XMLHttpRequests that cy.route() generates.
+        // This server will forward the request on to the actual endpoint https://accounts.lambdatest.com/api/user ...
+        cy.server()
 
         // Use cy.route() to manage the behaviour of (XMLHttpRequests) network requests sent by cypress 
         // Send a GET request to the team end point
-        // cy.route({
-        //     method: 'GET',
-        //     url: 'api/user/organization/team'
-        // }).as('team')
+        cy.route({
+            method: 'GET',
+            url: 'api/user/organization/team'
+        }).as('team')
 
         // get the password from the file in fixtures folder
         cy.fixture("xhruser").as("user")
@@ -29,11 +30,10 @@ describe("Test LambdaTest Website XHR", () => {
         // cy.get("[class='btn btn-primary btn-lg btn-block mt-3']").debug().click()
 
         // Assert the response code is OK
-        // cy.get("@team").then((xhrResponse) => {
-        //     expect(xhrResponse.status).to.eq(200)
-        //     expect(xhrResponse.response.body.data[0]).should.contain("name")
-        //     expect(xhrResponse.response.body.data[0]).to.have.property("name")
-        // })
+        cy.get("@team").then((xhrResponse) => {
+            expect(xhrResponse.status).to.eq(200)
+            expect(xhrResponse.response.body.data[0]).to.have.property("name")
+        })
         
     })
 })
