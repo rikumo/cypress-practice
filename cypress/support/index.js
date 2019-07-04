@@ -21,3 +21,8 @@ import './commands'
 
 // Bring in the cypress dark theme plugin I have installed
 // require('cypress-dark') - looks to cause cypress cache to be corrupt. To fix this, issue npm cache clear --force. Then reinstall cypress
+
+// Listen for uncaught exceptions in the Application Under Test and ignore such
+Cypress.on("uncaught:exception", (err, runnable) => {
+    return false
+})
