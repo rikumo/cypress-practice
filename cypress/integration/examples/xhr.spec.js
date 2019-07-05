@@ -16,24 +16,31 @@ describe("Test LambdaTest Website XHR", () => {
             url: 'api/user/organization/team'
         }).as('team')
 
+        cy.route({
+            method: 'GET',
+            url: 'api/user/organization/automation-test-summary'
+        }).as('apiCheck')
+
         // get the password from the file in fixtures folder
         cy.fixture("xhruser").as("user")
 
+        // The actions that invoke XHR requests in the application
         cy.get("@user").then((theuser) => {
             // the code that needs to access the alias needs to be within this lambda
             cy.get("[name='email']").debug().type(theuser.username)
             cy.get("[name='password']", {timeout: 10000}).debug().type(theuser.password, { log: false })
 
-        })
-        
-        cy.get('.btn').click()
-        // cy.get("[class='btn btn-primary btn-lg btn-block mt-3']").debug().click()
+        })        
+        cy.get('.btn').click()                      
 
-        // Assert the response code is OK
+        // Make assertions on the response using explicit assertions - Response code is OK, JSON body property values
         cy.get("@team").then((xhrResponse) => {
             expect(xhrResponse.status).to.eq(200)
             expect(xhrResponse.response.body.data[0]).to.have.property("name")
+            expect(xhrResponse.response.body.data[0]).to.have.property("name", "Test User")
         })
         
+        // Making assertions on the Response using implicit assertions
+        cy.get("@apiCheck").its("response.body").should("have.property", "maxQueue").and("eq", 10)
     })
 })
