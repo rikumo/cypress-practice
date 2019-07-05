@@ -1,6 +1,6 @@
 describe("Test LambdaTest Website XHR", () => {
 
-    before("Go to the login page", () => {
+    beforeEach("Go to the login page", () => {
         cy.visit("https://accounts.lambdatest.com/login")
     })
     
@@ -21,17 +21,7 @@ describe("Test LambdaTest Website XHR", () => {
             url: 'api/user/organization/automation-test-summary'
         }).as('apiCheck')
 
-        // get the password from the file in fixtures folder
-        cy.fixture("xhruser").as("user")
-
-        // The actions that invoke XHR requests in the application
-        cy.get("@user").then((theuser) => {
-            // the code that needs to access the alias needs to be within this lambda
-            cy.get("[name='email']").debug().type(theuser.username)
-            cy.get("[name='password']", {timeout: 10000}).debug().type(theuser.password, { log: false })
-
-        })        
-        cy.get('.btn').click()                      
+        cy.LoginToLambdatest()
 
         // Make assertions on the response using explicit assertions - Response code is OK, JSON body property values
         cy.get("@team").then((xhrResponse) => {
@@ -42,5 +32,11 @@ describe("Test LambdaTest Website XHR", () => {
         
         // Making assertions on the Response using implicit assertions
         cy.get("@apiCheck").its("response.body").should("have.property", "maxQueue").and("eq", 10)
+    })
+
+    it("Verify cookies", () => {
+        cy.LoginToLambdatest()
+
+        cy.getCookie("user_id").should("have.property", "value", "80099")
     })
 })

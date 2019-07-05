@@ -41,3 +41,17 @@ Cypress.Commands.add("Login", () => {
     // Click the login button
     cy.get('.btn').click({force: true})
 })
+
+Cypress.Commands.add("LoginToLambdatest", () => {
+    // get the password from the file in fixtures folder
+    cy.fixture("xhruser").as("user")
+
+    // The actions that invoke XHR requests in the application
+    cy.get("@user").then((theuser) => {
+        // the code that needs to access the alias needs to be within this lambda
+        cy.get("[name='email']").debug().type(theuser.username)
+        cy.get("[name='password']", {timeout: 10000}).debug().type(theuser.password, { log: false })
+
+    })        
+    cy.get('.btn').click()
+})
