@@ -3,8 +3,8 @@
 // Page object for Execute Automation Login page
 export class EALoginPage {
     performLogin(userName, password) {
-        cy.get('#UserName').type(creds.username, {log:false})        
-        cy.get('#Password').type(creds.password, {log:false})
+        cy.get('#UserName').type(userName, {log:false})        
+        cy.get('#Password').type(password, {log:false})
     }
 
     clickLoginButton() {

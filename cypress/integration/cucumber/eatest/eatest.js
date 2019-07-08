@@ -1,4 +1,5 @@
 import { Given, When, Then, And, Before, BeforeEach, After, AfterEach } from "cypress-cucumber-preprocessor/steps";
+import {loginPage} from "../../examples/pages/ealoginpage"
 
 
 Given("I visit the EA site", () => {
@@ -27,9 +28,15 @@ And("I enter username {string} and password {string}", (uname, pwd) => {
 
 Given("I login using the data table:", (datatable) => {
     datatable.hashes().forEach(row => {
-        cy.get('#UserName').type(row.username)
-        cy.get("#Password").type(row.password, {log:false})
+        // cy.get('#UserName').type(row.username)
+        // cy.get("#Password").type(row.password, {log:false})
+
+        // Use Page Object instead of above
+        loginPage.performLogin(row.username, row.password)
     });
 
-    cy.get('.btn').click()
+    // cy.get('.btn').click()
+
+    // Use Page Object instead of above
+    loginPage.clickLoginButton()
 })
