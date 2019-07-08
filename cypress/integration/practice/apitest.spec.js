@@ -1,5 +1,6 @@
 /// <reference types="Cypress" />
 
+// cy.request is used to send HTTP requests using Cypress
 context("Cypress API testing using Fake JSON server backend", () => {
     it("GET functionality of JSON Server", () => {
         const response = cy.request("http://localhost:3000/posts/1").its("body")
@@ -8,7 +9,9 @@ context("Cypress API testing using Fake JSON server backend", () => {
 
     // This before would only apply to the `it` block following it
     before("DELETE the record posted to db.json before re-posting", () => {
-        cy.request("DELETE", "http://localhost:3000/posts/2")
+        if(cy.request("http://localhost:3000/posts/2").its("isOkStatusCode")) {
+            cy.request("DELETE", "http://localhost:3000/posts/2")
+        }        
     })
 
     it("POST functionality of JSON Server", () => {
