@@ -26,3 +26,10 @@ import './commands'
 Cypress.on("uncaught:exception", (err, runnable) => {
     return false
 })
+
+// Make cypress-xpath available
+require("cypress-xpath")
+
+// Import the Cypress file upload plugin
+import 'cypress-file-upload'
+
