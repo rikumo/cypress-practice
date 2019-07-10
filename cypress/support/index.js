@@ -32,4 +32,3 @@ require("cypress-xpath")
 
 // Import the Cypress file upload plugin
 import 'cypress-file-upload'
-
