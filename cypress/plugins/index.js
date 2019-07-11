@@ -35,7 +35,8 @@ module.exports = (on, config) => {
     // Because chrome is going to be used with the Cypress command line, args would be available and we can push to it 
     if(browser.name === 'chrome') {
       args.push('--start-fullscreen')
-      args.push('--incognito')
+      // Incognito mode would not run in Cypress as Cypress always starts with a new profile everytime, equating to incognito
+      // args.push('--incognito')
       return args
     }
   })
