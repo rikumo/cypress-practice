@@ -26,7 +26,7 @@ module.exports = (on, config) => {
   // Fire the before:browser:launch event. The handler maximises the browser
   on('before:browser:launch', (browser = {}, args) => {
     // For electron browser, set up and return the args variable that the runner would use
-    if (browser.name === 'electron') {
+    if(browser.name === 'electron') {
       // args.push('--start-fullscreen')
       args['fullscreen'] = true
       return args
@@ -35,6 +35,8 @@ module.exports = (on, config) => {
     // Because chrome is going to be used with the Cypress command line, args would be available and we can push to it 
     if(browser.name === 'chrome') {
       args.push('--start-fullscreen')
+      args.push('--incognito')
+      return args
     }
   })
 }
