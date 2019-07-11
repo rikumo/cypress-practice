@@ -5,6 +5,7 @@ context("Cypress Tidbits File upload Actions", () => {
         cy.visit("https://fineuploader.com/demos.html")
     })
 
+    // I keep getting a CORS error from the website. Not sure how to resolve this. Will research in community
     it("File upload demo", () => {
         cy.fixture("FileUpload.PNG", "base64").then(fileContent => {
             cy.get("#fine-uploader-s3 > .qq-uploader-selector > .qq-upload-button-selector > input").upload({
@@ -14,7 +15,7 @@ context("Cypress Tidbits File upload Actions", () => {
                 encoding: "utf-8"
             },
             { 
-                subjectType: "input"
+                subjectType: "drag-n-drop"
             })
         })
     })

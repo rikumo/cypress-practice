@@ -27,7 +27,7 @@ Cypress.on("uncaught:exception", (err, runnable) => {
     return false
 })
 
-// Make cypress-xpath available
+// Make cypress-xpath plugin available
 require("cypress-xpath")
 
 // Import the Cypress file upload plugin
