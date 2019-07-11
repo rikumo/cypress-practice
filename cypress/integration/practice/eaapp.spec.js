@@ -28,8 +28,13 @@ describe("Test EA Application", () => {
         // Using aliasing to find and click through the rows of a table
         cy.get('.table').find('tr').as("rows")
         cy.get("@rows").then(($theRows) => {
+            // Programmatically puts a break point at this point so that we can have visibility into the variables in this scope
+            debugger
             cy.wrap($theRows).click({multiple:true})
         })
+
+        // Use the Javascript debbuger in Cypress. Breakpoint would be added here, but there is nothing visible within this scope
+        debugger
 
         // Using wrap command to yield the properties (and functions) of an object. An alternative to: 
         // cy.get('.table').find('tr').contains("Karthik").parent().contains("Benefits").click()
