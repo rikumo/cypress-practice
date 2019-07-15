@@ -23,12 +23,13 @@ module.exports = (on, config) => {
 module.exports = (on, config) => {
   on('file:preprocessor', cucumber())
 
-  // Fire the before:browser:launch event. The handler maximises the browser
+  // Cypress internally performs actions that fire the before:browser:launch event before launching the browser. 
+  // The below hooks into the event to configure settings that will cause the browser to be launched in fullscreen mode.
   on('before:browser:launch', (browser = {}, args) => {
     // For electron browser, set up and return the args variable that the runner would use
     if(browser.name === 'electron') {
       // args.push('--start-fullscreen')
-      args['fullscreen'] = true
+      args['fullscreen'] = false
       return args
     }
 
