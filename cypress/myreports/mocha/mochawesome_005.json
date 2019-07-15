@@ -1,0 +1,78 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2019-07-15T11:18:37.305Z",
+    "end": "2019-07-15T11:18:42.357Z",
+    "duration": 5052,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "success",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "b3135742-c4b1-47ad-aa5d-494d3e838e31",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "96e0c604-3d5e-4a56-8d97-112727fbcd82",
+        "title": "Test EA Application",
+        "fullFile": "",
+        "file": "",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "Performing Benefit Check",
+            "fullTitle": "Test EA Application Performing Benefit Check",
+            "duration": 3929,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "cy.contains(\"Employee List\").click(); // cy.get('.table').find('tr').contains(\"Karthik\").parent().contains(\"Benefits\").click()\n// Access the environment variable \"var1\" from the environment variables defined in cypress.json\n/*cy.get('.table').find('tr').contains(\"Karthik\").parent().contains(Cypress.env(\"var1\")).click()*/\n// Using aliasing to find and click through the rows of a table\ncy.get('.table').find('tr').as(\"rows\");\ncy.get(\"@rows\").then(function ($theRows) {\n  // Programmatically puts a break point at this point so that we can have visibility into the variables in this scope\n  debugger;\n  cy.wrap($theRows).click({\n    multiple: true\n  });\n}); // Use the Javascript debbuger in Cypress. Breakpoint would be added here, but there is nothing visible within this scope\ndebugger; // Using wrap command to yield the properties (and functions) of an object. An alternative to: \n// cy.get('.table').find('tr').contains(\"Karthik\").parent().contains(\"Benefits\").click()\ncy.get('.table').find('tr > td').then(function ($tds) {\n  // Interested in the td that has \"John\", yield it and get it's parent element which is the row. Click on the Benefits link\n  cy.wrap($tds).contains(\"John\").invoke(\"wrap\").parent().contains(\"Benefits\").click();\n});",
+            "err": {},
+            "isRoot": false,
+            "uuid": "fe6e7354-ce8c-4b29-bb3c-3530120b792b",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "fe6e7354-ce8c-4b29-bb3c-3530120b792b"
+        ],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 3929,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
+  "copyrightYear": 2019
+}

@@ -1,0 +1,113 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 0,
+    "passes": 0,
+    "pending": 0,
+    "failures": 0,
+    "start": "2019-07-15T11:18:15.530Z",
+    "end": "2019-07-15T11:18:34.311Z",
+    "duration": 18781,
+    "testsRegistered": 3,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 3,
+    "hasSkipped": true,
+    "passPercentClass": "danger",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "f9a49397-3fbc-4b00-8d28-39295b3b7648",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "b677646c-3651-4dee-b33b-e6374f48e867",
+        "title": "Cypress API testing using Fake JSON server backend",
+        "fullFile": "",
+        "file": "",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "GET functionality of JSON Server",
+            "fullTitle": "Cypress API testing using Fake JSON server backend GET functionality of JSON Server",
+            "duration": 18752,
+            "state": "failed",
+            "pass": false,
+            "fail": true,
+            "pending": false,
+            "code": "var response = cy.request(\"http://localhost:3000/posts/1\").its(\"body\");\nresponse.should(\"have.property\", \"id\").and(\"equal\", 1);",
+            "err": {
+              "message": "CypressError: cy.request() failed trying to load:\n\nhttp://localhost:3000/posts/2\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:3000\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: GET\nURL: http://localhost:3000/posts/2\n\n-----------------------------------------------------------\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThe stack trace for this error is:\n\nRequestError: Error: connect ECONNREFUSED 127.0.0.1:3000\n    at new RequestError (/Users/omoribake.ikumoluyi/Library/Caches/Cypress/3.3.2/Cypress.app/Contents/Resources/app/packages/server/node_modules/request-promise-core/lib/errors.js:14:15)\n    at Request.plumbing.callback (/Users/omoribake.ikumoluyi/Library/Caches/Cypress/3.3.2/Cypress.app/Contents/Resources/app/packages/server/node_modules/request-promise-core/lib/plumbing.js:87:29)\n    at Request.RP$callback [as _callback] (/Users/omoribake.ikumoluyi/Library/Caches/Cypress/3.3.2/Cypress.app/Contents/Resources/app/packages/server/node_modules/request-promise-core/lib/plumbing.js:46:31)\n    at self.callback (/Users/omoribake.ikumoluyi/Library/Caches/Cypress/3.3.2/Cypress.app/Contents/Resources/app/packages/server/node_modules/request/request.js:185:22)\n    at emitOne (events.js:116:13)\n    at Request.emit (events.js:211:7)\n    at Request.onRequestError (/Users/omoribake.ikumoluyi/Library/Caches/Cypress/3.3.2/Cypress.app/Contents/Resources/app/packages/server/node_modules/request/request.js:881:8)\n    at emitOne (events.js:121:20)\n    at ClientRequest.emit (events.js:211:7)\n    at Socket.socketErrorListener (_http_client.js:387:9)\n    at emitOne (events.js:116:13)\n    at Socket.emit (events.js:211:7)\n    at emitErrorNT (internal/streams/destroy.js:64:8)\n    at _combinedTickCallback (internal/process/next_tick.js:138:11)\n    at process._tickCallback (internal/process/next_tick.js:180:9)\n\n\nBecause this error occurred during a 'before all' hook we are skipping the remaining tests in the current suite: 'Cypress API testing using F...'",
+              "estack": "CypressError: cy.request() failed trying to load:\n\nhttp://localhost:3000/posts/2\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:3000\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: GET\nURL: http://localhost:3000/posts/2\n\n-----------------------------------------------------------\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThe stack trace for this error is:\n\nRequestError: Error: connect ECONNREFUSED 127.0.0.1:3000\n    at new RequestError (/Users/omoribake.ikumoluyi/Library/Caches/Cypress/3.3.2/Cypress.app/Contents/Resources/app/packages/server/node_modules/request-promise-core/lib/errors.js:14:15)\n    at Request.plumbing.callback (/Users/omoribake.ikumoluyi/Library/Caches/Cypress/3.3.2/Cypress.app/Contents/Resources/app/packages/server/node_modules/request-promise-core/lib/plumbing.js:87:29)\n    at Request.RP$callback [as _callback] (/Users/omoribake.ikumoluyi/Library/Caches/Cypress/3.3.2/Cypress.app/Contents/Resources/app/packages/server/node_modules/request-promise-core/lib/plumbing.js:46:31)\n    at self.callback (/Users/omoribake.ikumoluyi/Library/Caches/Cypress/3.3.2/Cypress.app/Contents/Resources/app/packages/server/node_modules/request/request.js:185:22)\n    at emitOne (events.js:116:13)\n    at Request.emit (events.js:211:7)\n    at Request.onRequestError (/Users/omoribake.ikumoluyi/Library/Caches/Cypress/3.3.2/Cypress.app/Contents/Resources/app/packages/server/node_modules/request/request.js:881:8)\n    at emitOne (events.js:121:20)\n    at ClientRequest.emit (events.js:211:7)\n    at Socket.socketErrorListener (_http_client.js:387:9)\n    at emitOne (events.js:116:13)\n    at Socket.emit (events.js:211:7)\n    at emitErrorNT (internal/streams/destroy.js:64:8)\n    at _combinedTickCallback (internal/process/next_tick.js:138:11)\n    at process._tickCallback (internal/process/next_tick.js:180:9)\n\n\nBecause this error occurred during a 'before all' hook we are skipping the remaining tests in the current suite: 'Cypress API testing using F...'\n    at Object.cypressErr (http://localhost:55624/__cypress/runner/cypress_runner.js:84573:11)\n    at Object.throwErr (http://localhost:55624/__cypress/runner/cypress_runner.js:84538:18)\n    at Object.throwErrByPath (http://localhost:55624/__cypress/runner/cypress_runner.js:84565:17)\n    at http://localhost:55624/__cypress/runner/cypress_runner.js:75584:23\n    at tryCatcher (http://localhost:55624/__cypress/runner/cypress_runner.js:133768:23)\n    at http://localhost:55624/__cypress/runner/cypress_runner.js:129095:37\n    at tryCatcher (http://localhost:55624/__cypress/runner/cypress_runner.js:133768:23)\n    at Promise._settlePromiseFromHandler (http://localhost:55624/__cypress/runner/cypress_runner.js:131786:31)\n    at Promise._settlePromise (http://localhost:55624/__cypress/runner/cypress_runner.js:131843:18)\n    at Promise._settlePromise0 (http://localhost:55624/__cypress/runner/cypress_runner.js:131888:10)\n    at Promise._settlePromises (http://localhost:55624/__cypress/runner/cypress_runner.js:131963:18)\n    at Async._drainQueue (http://localhost:55624/__cypress/runner/cypress_runner.js:128692:16)\n    at Async._drainQueues (http://localhost:55624/__cypress/runner/cypress_runner.js:128702:10)\n    at Async.drainQueues (http://localhost:55624/__cypress/runner/cypress_runner.js:128576:14)"
+            },
+            "isRoot": false,
+            "uuid": "aa2819a8-afc9-44a8-8469-3680cd054194",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "POST functionality of JSON Server",
+            "fullTitle": "Cypress API testing using Fake JSON server backend POST functionality of JSON Server",
+            "duration": 0,
+            "state": "skipped",
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "cy.request(\"POST\", \"http://localhost:3000/posts\", {\n  \"id\": 2,\n  \"title\": \"Udemy Cypress course\",\n  \"author\": \"Ribake I\"\n}).then(function (response) {\n  expect(response.body).has.property(\"author\", \"Ribake I\");\n});",
+            "err": {},
+            "isRoot": false,
+            "uuid": "8a7f76a1-8148-4c05-8b9f-48050ee85625",
+            "isHook": false,
+            "skipped": true
+          },
+          {
+            "title": "API Testing",
+            "fullTitle": "Cypress API testing using Fake JSON server backend API Testing",
+            "duration": 0,
+            "state": "skipped",
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "cy.request({\n  method: \"POST\",\n  url: \"http://eaapp.somee.com/Account/Login\",\n  body: {\n    \"__RequestVerificationToken\": \"jJ27CGSB6SHC24F0oV5nGIcKmDPqG2WfwOCDZxTUIhJ8Tk9TiSYlzhrzuhP5Ct2rHTiOY46WawRVGy6qanY18HsdbKEeK0TqWjgOY9b6RZE1\",\n    \"UserName\": \"admin\",\n    \"Password\": \"password\",\n    \"RememberMe\": \"false\"\n  },\n  failOnStatusCode: false\n}).then(function (response) {\n  expect(response.status).to.eql(500);\n  expect(response.body).to.contain(\"<i>The required anti-forgery cookie &quot;__RequestVerificationToken&quot; is not present.</i>\");\n});",
+            "err": {},
+            "isRoot": false,
+            "uuid": "666635d4-d67a-4b02-a078-cf36787bfd25",
+            "isHook": false,
+            "skipped": true
+          }
+        ],
+        "suites": [],
+        "passes": [],
+        "failures": [
+          "aa2819a8-afc9-44a8-8469-3680cd054194"
+        ],
+        "pending": [],
+        "skipped": [
+          "8a7f76a1-8148-4c05-8b9f-48050ee85625",
+          "666635d4-d67a-4b02-a078-cf36787bfd25"
+        ],
+        "duration": 18752,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
+  "copyrightYear": 2019
+}

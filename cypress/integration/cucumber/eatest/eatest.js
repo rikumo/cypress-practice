@@ -1,5 +1,5 @@
 import { Given, When, Then, And, Before, BeforeEach, After, AfterEach } from "cypress-cucumber-preprocessor/steps";
-import {loginPage} from "../../examples/pages/ealoginpage"
+import {loginPage} from "../../practice/pages/ealoginpage"
 
 
 Given("I visit the EA site", () => {

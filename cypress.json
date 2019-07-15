@@ -3,5 +3,9 @@
     "env": {
         "var1": "first",
         "var2": "second"
+    },
+    "reporter": "cypress-multi-reporters",
+    "reporterOptions": {
+        "configFile": "myReporterOptions.json"
     }
 }

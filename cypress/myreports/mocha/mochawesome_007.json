@@ -1,0 +1,78 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2019-07-15T11:18:56.314Z",
+    "end": "2019-07-15T11:18:57.205Z",
+    "duration": 891,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "success",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "f5e41c1d-e37a-4556-8ce1-053a495d3cc7",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "d8b0abad-81cd-40a7-a6a6-82232c31fbe7",
+        "title": "Actions",
+        "fullFile": "",
+        "file": "",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "Perform iFrame data entry",
+            "fullTitle": "Actions Perform iFrame data entry",
+            "duration": 860,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "cy.get(\"#txtName\").type(\"Cypress\"); // Get the iframe. Equivalent to switching to iframe in Selenium\ncy.get(\"#frame\").then(function (theIFrame) {\n  // get the iframe contents\n  var iframeBody = theIFrame.contents().find(\"body\");\n  cy.wrap(iframeBody).as(\"iframeContent\");\n});\ncy.get(\"@iframeContent\").find(\"#txtNameWithiniFrame\").type(\"typing text into iframe\");",
+            "err": {},
+            "isRoot": false,
+            "uuid": "5100dd98-b99f-4853-bc8d-736ad5ad13da",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "5100dd98-b99f-4853-bc8d-736ad5ad13da"
+        ],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 860,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
+  "copyrightYear": 2019
+}
