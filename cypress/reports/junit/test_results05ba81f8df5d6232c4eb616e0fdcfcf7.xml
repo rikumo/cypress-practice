@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0" tests="3" failures="1">
+  <testsuite name="Root Suite" timestamp="2019-07-15T12:56:09" tests="0" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Cypress API testing using Fake JSON server backend" timestamp="2019-07-15T12:56:09" tests="3" failures="1" time="0">
+    <testcase name="Cypress API testing using Fake JSON server backend &quot;before all&quot; hook: DELETE the record posted to db.json before re-posting for &quot;GET functionality of JSON Server&quot;" time="0" classname="&quot;before all&quot; hook: DELETE the record posted to db.json before re-posting for &quot;GET functionality of JSON Server&quot;">
+      <failure message="cy.request() failed trying to load:
+
+http://localhost:3000/posts/2
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  &gt; Error: connect ECONNREFUSED 127.0.0.1:3000
+
+-----------------------------------------------------------
+
+The request we sent was:
+
+Method: GET
+URL: http://localhost:3000/posts/2
+
+-----------------------------------------------------------
+
+Common situations why this would fail:
+  - you don&apos;t have internet access
+  - you forgot to run / boot your web server
+  - your web server isn&apos;t accessible
+  - you have weird network configuration settings on your computer
+
+The stack trace for this error is:
+
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:3000
+    at new RequestError (/Users/omoribake.ikumoluyi/Library/Caches/Cypress/3.3.2/Cypress.app/Contents/Resources/app/packages/server/node_modules/request-promise-core/lib/errors.js:14:15)
+    at Request.plumbing.callback (/Users/omoribake.ikumoluyi/Library/Caches/Cypress/3.3.2/Cypress.app/Contents/Resources/app/packages/server/node_modules/request-promise-core/lib/plumbing.js:87:29)
+    at Request.RP$callback [as _callback] (/Users/omoribake.ikumoluyi/Library/Caches/Cypress/3.3.2/Cypress.app/Contents/Resources/app/packages/server/node_modules/request-promise-core/lib/plumbing.js:46:31)
+    at self.callback (/Users/omoribake.ikumoluyi/Library/Caches/Cypress/3.3.2/Cypress.app/Contents/Resources/app/packages/server/node_modules/request/request.js:185:22)
+    at emitOne (events.js:116:13)
+    at Request.emit (events.js:211:7)
+    at Request.onRequestError (/Users/omoribake.ikumoluyi/Library/Caches/Cypress/3.3.2/Cypress.app/Contents/Resources/app/packages/server/node_modules/request/request.js:881:8)
+    at emitOne (events.js:121:20)
+    at ClientRequest.emit (events.js:211:7)
+    at Socket.socketErrorListener (_http_client.js:387:9)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at emitErrorNT (internal/streams/destroy.js:64:8)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+
+
+Because this error occurred during a &apos;before all&apos; hook we are skipping the remaining tests in the current suite: &apos;Cypress API testing using F...&apos;" type="CypressError"><![CDATA[CypressError: cy.request() failed trying to load:
+
+http://localhost:3000/posts/2
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: connect ECONNREFUSED 127.0.0.1:3000
+
+-----------------------------------------------------------
+
+The request we sent was:
+
+Method: GET
+URL: http://localhost:3000/posts/2
+
+-----------------------------------------------------------
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+
+The stack trace for this error is:
+
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:3000
+    at new RequestError (/Users/omoribake.ikumoluyi/Library/Caches/Cypress/3.3.2/Cypress.app/Contents/Resources/app/packages/server/node_modules/request-promise-core/lib/errors.js:14:15)
+    at Request.plumbing.callback (/Users/omoribake.ikumoluyi/Library/Caches/Cypress/3.3.2/Cypress.app/Contents/Resources/app/packages/server/node_modules/request-promise-core/lib/plumbing.js:87:29)
+    at Request.RP$callback [as _callback] (/Users/omoribake.ikumoluyi/Library/Caches/Cypress/3.3.2/Cypress.app/Contents/Resources/app/packages/server/node_modules/request-promise-core/lib/plumbing.js:46:31)
+    at self.callback (/Users/omoribake.ikumoluyi/Library/Caches/Cypress/3.3.2/Cypress.app/Contents/Resources/app/packages/server/node_modules/request/request.js:185:22)
+    at emitOne (events.js:116:13)
+    at Request.emit (events.js:211:7)
+    at Request.onRequestError (/Users/omoribake.ikumoluyi/Library/Caches/Cypress/3.3.2/Cypress.app/Contents/Resources/app/packages/server/node_modules/request/request.js:881:8)
+    at emitOne (events.js:121:20)
+    at ClientRequest.emit (events.js:211:7)
+    at Socket.socketErrorListener (_http_client.js:387:9)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at emitErrorNT (internal/streams/destroy.js:64:8)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+
+
+Because this error occurred during a 'before all' hook we are skipping the remaining tests in the current suite: 'Cypress API testing using F...'
+    at Object.cypressErr (http://localhost:59237/__cypress/runner/cypress_runner.js:84573:11)
+    at Object.throwErr (http://localhost:59237/__cypress/runner/cypress_runner.js:84538:18)
+    at Object.throwErrByPath (http://localhost:59237/__cypress/runner/cypress_runner.js:84565:17)
+    at http://localhost:59237/__cypress/runner/cypress_runner.js:75584:23
+    at tryCatcher (http://localhost:59237/__cypress/runner/cypress_runner.js:133768:23)
+    at http://localhost:59237/__cypress/runner/cypress_runner.js:129095:37
+    at tryCatcher (http://localhost:59237/__cypress/runner/cypress_runner.js:133768:23)
+    at Promise._settlePromiseFromHandler (http://localhost:59237/__cypress/runner/cypress_runner.js:131786:31)
+    at Promise._settlePromise (http://localhost:59237/__cypress/runner/cypress_runner.js:131843:18)
+    at Promise._settlePromise0 (http://localhost:59237/__cypress/runner/cypress_runner.js:131888:10)
+    at Promise._settlePromises (http://localhost:59237/__cypress/runner/cypress_runner.js:131963:18)
+    at Async._drainQueue (http://localhost:59237/__cypress/runner/cypress_runner.js:128692:16)
+    at Async._drainQueues (http://localhost:59237/__cypress/runner/cypress_runner.js:128702:10)
+    at Async.drainQueues (http://localhost:59237/__cypress/runner/cypress_runner.js:128576:14)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

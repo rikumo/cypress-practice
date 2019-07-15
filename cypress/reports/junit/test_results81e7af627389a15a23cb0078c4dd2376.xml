@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0" tests="1" failures="1">
+  <testsuite name="Root Suite" timestamp="2019-07-15T12:56:05" tests="0" failures="0" time="0">
+  </testsuite>
+  <testsuite name="The Facebook" timestamp="2019-07-15T12:56:05" tests="1" failures="1" time="0">
+    <testcase name="The Facebook Opening a social network page" time="0" classname="Opening a social network page">
+      <failure message="Step implementation missing for: I open Google page" type="Error"><![CDATA[Error: Step implementation missing for: I open Google page
+    at Context.resolveAndRunStepDefinition (http://localhost:59237/__cypress/tests?p=cypress/integration/cucumber/Google.feature-782:9705:11)
+    at Context.stepTest (http://localhost:59237/__cypress/tests?p=cypress/integration/cucumber/Google.feature-782:9459:31)
+    at http://localhost:59237/__cypress/tests?p=cypress/integration/cucumber/Google.feature-782:9504:47
+    at Array.forEach (<anonymous>)
+    at Context.<anonymous> (http://localhost:59237/__cypress/tests?p=cypress/integration/cucumber/Google.feature-782:9504:22)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

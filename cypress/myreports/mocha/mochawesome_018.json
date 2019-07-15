@@ -1,0 +1,23 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 0,
+    "passes": 0,
+    "pending": 0,
+    "failures": 0,
+    "start": "2019-07-15T12:57:00.029Z",
+    "end": "2019-07-15T12:57:00.030Z",
+    "duration": 1,
+    "testsRegistered": 0,
+    "passPercent": null,
+    "pendingPercent": null,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "success",
+    "pendingPercentClass": "success"
+  },
+  "suites": false,
+  "copyrightYear": 2019
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="1.658" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2019-07-15T12:55:40" tests="0" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Handle alerts and popups with Cypress" timestamp="2019-07-15T12:55:40" tests="1" failures="0" time="1.658">
+    <testcase name="Handle alerts and popups with Cypress Perform login and handle alerts" time="1.658" classname="Perform login and handle alerts">
+    </testcase>
+  </testsuite>
+</testsuites>

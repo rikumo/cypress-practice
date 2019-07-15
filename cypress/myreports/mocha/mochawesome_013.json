@@ -1,0 +1,80 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2019-07-15T12:56:05.625Z",
+    "end": "2019-07-15T12:56:06.156Z",
+    "duration": 531,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "danger",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "b10e770b-358b-48f8-829c-28f592c07df5",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "e417eca2-54fc-4b57-a00e-4e5688094b16",
+        "title": "The Facebook",
+        "fullFile": "",
+        "file": "",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "Opening a social network page",
+            "fullTitle": "The Facebook Opening a social network page",
+            "duration": 496,
+            "state": "failed",
+            "pass": false,
+            "fail": true,
+            "pending": false,
+            "code": "if (backgroundSection) {\n  backgroundSection.steps.forEach(step => stepTest.call(this, step));\n}\nscenario.steps.forEach(step => stepTest.call(this, step));",
+            "err": {
+              "message": "Error: Step implementation missing for: I open Google page",
+              "estack": "Error: Step implementation missing for: I open Google page\n    at Context.resolveAndRunStepDefinition (http://localhost:59237/__cypress/tests?p=cypress/integration/cucumber/Google.feature-782:9705:11)\n    at Context.stepTest (http://localhost:59237/__cypress/tests?p=cypress/integration/cucumber/Google.feature-782:9459:31)\n    at http://localhost:59237/__cypress/tests?p=cypress/integration/cucumber/Google.feature-782:9504:47\n    at Array.forEach (<anonymous>)\n    at Context.<anonymous> (http://localhost:59237/__cypress/tests?p=cypress/integration/cucumber/Google.feature-782:9504:22)"
+            },
+            "isRoot": false,
+            "uuid": "ae4e70da-445a-407b-8fbf-d37246e23756",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [],
+        "failures": [
+          "ae4e70da-445a-407b-8fbf-d37246e23756"
+        ],
+        "pending": [],
+        "skipped": [],
+        "duration": 496,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
+  "copyrightYear": 2019
+}

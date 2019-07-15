@@ -1,0 +1,78 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2019-07-15T12:55:40.794Z",
+    "end": "2019-07-15T12:55:44.188Z",
+    "duration": 3394,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "success",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "558a54cd-2c8a-4094-bc92-37de234a3dc6",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "cf361bc6-e319-4cc4-a1f9-c164e268bcab",
+        "title": "Handle alerts and popups with Cypress",
+        "fullFile": "",
+        "file": "",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "Perform login and handle alerts",
+            "fullTitle": "Handle alerts and popups with Cypress Perform login and handle alerts",
+            "duration": 1658,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "cy.get(\"[name='UserName']\").type(\"admin\");\ncy.get(\"[name='Password']\").type(\"password\");\ncy.get(\":nth-child(3) > input\").click(); // Causes the alert to pop up, which automatically generates the window:confirm event\ncy.get(\"[name='generate']\").click();\ndebugger; // Handles that event and trigger an OK (return true) or Cancel (return false)\ncy.on(\"window:confirm\", function (str) {\n  expect(str).to.eq(\"You generated a Javascript alert\"); // return false\n  return true;\n});",
+            "err": {},
+            "isRoot": false,
+            "uuid": "970997e0-e809-445a-8bb7-0473e244da6b",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "970997e0-e809-445a-8bb7-0473e244da6b"
+        ],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 1658,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
+  "copyrightYear": 2019
+}

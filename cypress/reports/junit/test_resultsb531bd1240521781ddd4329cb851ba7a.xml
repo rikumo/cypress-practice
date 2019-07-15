@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0" tests="2" failures="1">
+  <testsuite name="Root Suite" timestamp="2019-07-15T12:57:03" tests="0" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Test LambdaTest Website XHR" timestamp="2019-07-15T12:57:03" tests="2" failures="1" time="0">
+    <testcase name="Test LambdaTest Website XHR Perform login and verify response using XHR" time="0" classname="Perform login and verify response using XHR">
+      <failure message="Uncaught TypeError: Cannot read property &apos;style&apos; of null (https://accounts.lambdatest.com/login:126)" type="Error"><![CDATA[Error: Uncaught TypeError: Cannot read property 'style' of null (https://accounts.lambdatest.com/login:126)
+    at global.onerror (https://accounts.lambdatest.com/__cypress/runner/cypress_runner.js:48193:10)]]></failure>
+    </testcase>
+    <testcase name="Test LambdaTest Website XHR Verify cookies" time="0" classname="Verify cookies">
+    </testcase>
+  </testsuite>
+</testsuites>
