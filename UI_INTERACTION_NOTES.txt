@@ -1,0 +1,8 @@
+> `force` option causes Cypress to perform the action immediately, without performing the checks that it normally would
+  such as waiting for visibility, animations to clear e.t.c
+
+> `find` returns all the elements matching the selector
+
+> `filter` returns a single element matching the selector
+
+> `fixtures` is used to access non-Cypress files and media within tests
