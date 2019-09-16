@@ -1,0 +1,29 @@
+INSTALLATION
+============
+> npm install cypress (which installs cypress and all its node dependencies).
+> The test runner/playground which is the GUI that drives the tests is located in ~/Library/Caches/Cypress/<<version>>
+
+LAUNCH CYPRESS RUNNER/PLAYGROUND
+================================
+> npx cypress open
+A GUI where one can manually run tests. An alternative to running is running via the command line.
+The Settings show the full configuration.
+
+RUN TESTS THROUGH COMMANDLINE
+=============================
+> npx cypress run --spec <<path to spec file>>
+> Default behaviour launches Electron browser in headless mode, and creates a video mp4 into the videos folder.
+> npx cypress run --spec <<spec file>> --browser chrome (to run in Chrome)
+
+GENERAL
+=======
+> All files end with .spec.js
+> Tests in a spec file are self contained in a mocha `it` block. Can be compared to scenarios in frameworks like cucumber.
+
+CONFIGURATION FILES
+===================
+> package.json : node dependencies
+> cypress.json: configurations that control test run settings
+> cypress.env.json: variables you want tests to have access to during runtime; accessible through
+  Cypress.env(`variable_name`) in tests
+> cypress/plugins/index.js: file that exports plugins

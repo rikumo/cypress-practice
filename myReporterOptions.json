@@ -2,7 +2,7 @@
     "reporterEnabled": "mochawesome, mocha-junit-reporters",
     "mochaJunitReportersReporterOptions": {
         "mochaFile": "cypress/reports/junit/test_results[hash].xml",
-        "toConsole": false
+        "toConsole": true
     },
     "mochawesomeReporterOptions": {
         "reportDir": "cypress/myreports/mocha",
