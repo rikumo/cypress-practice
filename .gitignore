@@ -2,3 +2,4 @@
 node_modules/
 videos/
 cypress/fixtures/xhruser.json
+.idea/*
