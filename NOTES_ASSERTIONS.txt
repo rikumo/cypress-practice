@@ -1,0 +1,21 @@
+> Cypress bundles with Chai, Chai-jQuery, and Sinon-Chai libraries.
+> Cypress also bundles a few of its own assertion methods, some of whose names overlap with the bundled assertions.
+> Cypress implicitly retries for availability of elements for the default timeout before erroring.
+  [There is also the ability to wait for a desired condition using lighter syntax, unlike in Selenium
+ where fluent waits and their conditions, interval e.t.c need to be specified with verbose code.]
+
+ E.g Wait for slide 3 element to have specific class - Cypress
+    cy.get("jump to slide 2", {timeout:60000}).should('have.class', <<classname>>)
+
+Chai
+====
+> Generic assertions. Can be BDD style - expect() or should() or TDD style assert.<<condition>>()
+
+Chai-jQuery
+===========
+> Used to assert on properties of a DOM element such as visibility, prop, attr. Used often with element-yielding commands
+ like cy.get(), cy.filter(), cy.contains()
+
+Sinon-Chai
+===========
+> Used to assert on functions returned by cy.stub() and cy.spy()

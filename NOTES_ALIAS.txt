@@ -1,2 +1,4 @@
 > Aliases are used to return values from within promises (blocks of code within `then` blocks, queued run asynchronously)
  to the rest of the main code.
+
+ > Cypress `wrap` command returns all the properties of the argument object.
