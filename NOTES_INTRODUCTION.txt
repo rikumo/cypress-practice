@@ -30,6 +30,9 @@ CONFIGURATION FILES
 
 LINKING TO A CI TOOL
 ====================
-> The key to linking Cypress tests to a CI tool lies with connecting it through the Cypress dashboard.
-  This cannot be done through the ordinary Test Runner.
+> The key to linking Cypress tests to a CI tool lies with issuing the `cypress run` command with the desired options on
+  the CI tool's command line.
+
+> For tests with recording turned on, the recording can be made available on the Cypress dashboard by supplying the `record key` option to the `cypress run` command.
+
 > The Cypress dashboard generates a project id and a record key for every new project set up within it.
