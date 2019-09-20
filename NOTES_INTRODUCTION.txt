@@ -27,3 +27,9 @@ CONFIGURATION FILES
 > cypress.env.json: variables you want tests to have access to during runtime; accessible through
   Cypress.env(`variable_name`) in tests
 > cypress/plugins/index.js: file that exports plugins
+
+LINKING TO A CI TOOL
+====================
+> The key to linking Cypress tests to a CI tool lies with connecting it through the Cypress dashboard.
+  This cannot be done through the ordinary Test Runner.
+> The Cypress dashboard generates a project id and a record key for every new project set up within it.

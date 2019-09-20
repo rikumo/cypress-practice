@@ -1,0 +1,5 @@
+`then` allows you to wait for the subject (or element) yielded from the previous cypress command before continuing on
+with the task defined in the contained callback function.
+cy.get(selector).then((<<yielded_element>>) => {
+    yielded_element.doSomething()
+})
