@@ -10,7 +10,7 @@
     "cypress-file-upload": "^3.2.0",
     "cypress-xpath": "^1.4.0",
     "cypress-multi-reporters": "^1.1.22",
-    "mocha": "^6.1.4",
+    "mocha": "^10.2.0",
     "mocha-junit-reporters": "^1.23.6",
     "mochawesome": "^3.1.2",
     "mochawesome-merge": "^2.0.1",
